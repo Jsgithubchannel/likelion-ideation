@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slides.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Document</title>
+
 </head>
+
 <body>
     <nav>
         <a href="#Home">Home</a>
@@ -15,20 +20,31 @@
         <a href="#Ticket">Ticket</a>
     </nav>
     <section id="Home">
-        <h1>EDM Festival Alarm</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> 
-            Ratione, natus? Inventore fugit possimus ullam consequatur corporis quia.<br />  
-            Beatae ab facere eos iure necessitatibus deleniti reprehenderit ad porro,<br />  
-            nisi repudiandae delectus</p>
-        <button>Buy Tickets</button>
+        <div class="Home_paragraph">
+            <h1>FIESTA BELL</h1>
+            <p>
+                Fiesta bell gives you a bell to get low-price tickets, <br /> and shows you the lineup as soon as
+                possible.</p>
+        </div>
+        
+        <!-- <button>Buy Tickets</button> -->
+        <div class="container">
+            <div id="slides">
+                <img src="cover/1.jpg" alt="">
+                <img src="cover/2.jpg" alt="">
+                <img src="cover/3.jpg" alt="">
+            </div>
+        </div>
     </section>
     <section id="Gallery">
-            <img src="gallery1.jpg" alt="gallery">
+        <img src="gallery1.jpg" alt="gallery">
         <div class="pargraph">
             <h1>Gallery</h1>
-            <p>Let's see how the festivals were. <br/> Enim ipsa fugiat quasi odio vitae <br /> laboriosam praesentium recusandae in quam eius!</p>
+            <p>Let's see how the festivals were.<br/>
+                Lorem ipsum dolor sit amet consectetur<br /> adipisicing elit. Doloribus, fuga.
+            </p>
         </div>
-        </section>
+    </section>
     <section id="LineUp">
         <h1>LineUp</h1>
         <div class="dj_imgs">
@@ -54,6 +70,31 @@
             Due to ongoing pandemic stemming from COVID-19, <br /> the festivals will be rescheduled to 2021.
         </p>
     </section>
-    
+
+    <script src="jquery.slides.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#slides').slidesjs({
+                play: {
+                    active: false,
+                    effect: "fade",
+                    auto: true,
+                    interval: 5000,
+                    swap: true,
+                    restartDelay: 2500
+                },
+                effect:{
+                    fade:{
+                        speed:1500,
+                        crossfade: true
+                    }
+                }
+
+            });
+        });
+    </script>
+
 </body>
+
 </html>

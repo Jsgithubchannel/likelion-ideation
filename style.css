@@ -30,36 +30,46 @@ nav {
   z-index: 1;
 }
 nav > a {
-  margin: 0 5px;
+  margin: 0 10px;
   text-decoration: none;
   color: white;
 }
 
 section {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   height: 100%;
   border: 1px solid rgb(34, 34, 34);
 }
 
-#Home > h1 {
-  margin: 0;
-  color: white;
-  text-align: center;
-  font-size: 40px;
-}
-p {
-  font-size: 20px;
-  color: white;
-  text-align: center;
-}
+/* Home */
+
 #Home {
-  background: center / cover no-repeat url("bg.jpg");
-  opacity: 0.8;
+  overflow: hidden;
+}
+.Home_paragraph {
+  position: absolute;
+  margin-left: 30px;
+  color: rgb(255, 255, 255);
+  text-align: start;
+  z-index: 100;
+}
+#Home h1 {
+  margin-top: 120px;
+  margin-bottom: 0;
+  font-size: 50px;
+}
+#Home p {
+  font-size: 30px;
+}
+#Home img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-button {
+/* button {
   margin: 0 auto;
   width: 100px;
   height: 50px;
@@ -70,24 +80,23 @@ button {
 }
 button:hover {
   background-color: rgb(211, 210, 210);
-}
-
-h1 {
-  text-align: center;
-}
+} */
 
 /* Gallery */
 #Gallery {
-  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background-color: black;
   cursor: default;
+  overflow: hidden;
 }
 #Gallery img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   opacity: 0.6;
   transition: all 0.5s ease-in-out;
-  overflow: hidden;
 }
 #Gallery img:hover {
   transform: scale(1.1);
@@ -97,10 +106,13 @@ h1 {
 .pargraph {
   position: absolute;
   color: white;
-  font-size: 40px;
+  text-align: center;
 }
-.pargraph > p {
-  font-size: 22px;
+.pargraph h1 {
+  font-size: 50px;
+}
+.pargraph p {
+  font-size: 30px;
   -webkit-text-stroke-width: 0.4px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
 }
