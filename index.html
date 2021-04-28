@@ -8,60 +8,90 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slides.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <title>Document</title>
+    <title>Fiesta Bell</title>
 
 </head>
 
 <body>
-    <nav>
+    <nav id="navbar">
         <a href="#Home">Home</a>
         <a href="#Gallery">Gallery</a>
         <a href="#LineUp">LineUp</a>
         <a href="#Ticket">Ticket</a>
     </nav>
+
     <section id="Home">
         <div class="Home_paragraph">
             <h1>FIESTA BELL</h1>
-            <p>
-                Fiesta bell gives you a bell to get low-price tickets, <br /> and shows you the lineup as soon as
+            <p>Fiesta bell gives you a bell to get low-price tickets, <br /> and shows you the latest lineup as soon as
                 possible.</p>
         </div>
-        
+
         <!-- <button>Buy Tickets</button> -->
         <div class="container">
             <div id="slides">
-                <img src="cover/1.jpg" alt="">
-                <img src="cover/2.jpg" alt="">
-                <img src="cover/3.jpg" alt="">
+                <img src="imgs/cover/1.jpg" alt="cover photo">
+                <img src="imgs/cover/2.jpg" alt="cover photo">
+                <img src="imgs/cover/3.jpg" alt="cover photo">
+                <img src="imgs/cover/4.jpg" alt="cover photo">
             </div>
         </div>
     </section>
+
     <section id="Gallery">
-        <img src="gallery1.jpg" alt="gallery">
+        <img src="imgs/gallery.jpg" alt="gallery">
         <div class="pargraph">
             <h1>Gallery</h1>
-            <p>Let's see how the festivals were.<br/>
+            <p>Let's see how the festival was.<br />
                 Lorem ipsum dolor sit amet consectetur<br /> adipisicing elit. Doloribus, fuga.
             </p>
         </div>
     </section>
     <section id="LineUp">
-        <h1>LineUp</h1>
+        <h1>2021 UMF Headlines</h1>
         <div class="dj_imgs">
             <div class="row">
-                <img src="dj1.jpg" alt="dj" class="dj">
-                <img src="dj2.jpg" alt="dj" class="dj">
-                <img src="dj3.png" alt="dj" class="dj">
-                <img src="dj4.png" alt="dj" class="dj">
+                <img src="imgs/djs/1.jpg" alt="dj" class="dj">
+                </img>
+                <img src="imgs/djs/2.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/3.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/4.png" alt="dj" class="dj">
+                <div class="dj_names">
+                    <p class="dj_name">Martin Garrix</p>
+                    <p class="dj_name">Peggy gou</p>
+                    <p class="dj_name">Marshmello</p>
+                    <p class="dj_name">Diplo</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <img src="imgs/djs/5.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/6.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/7.png" alt="dj" class="dj">
+                <img src="imgs/djs/8.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/9.jpg" alt="dj" class="dj">
+                <div class="dj_names">
+                    <p class="dj_name">Charlotte de Witte</p>
+                    <p class="dj_name">Alan Walker</p>
+                    <p class="dj_name">Swedish House Mafia</p>
+                    <p class="dj_name">DJ Snake</p>
+                    <p class="dj_name">Avicii</p>
+                </div>
             </div>
             <div class="row">
-                <img src="dj5.jpg" alt="dj" class="dj">
-                <img src="dj6.jpg" alt="dj" class="dj">
-                <img src="dj7.jpg" alt="dj" class="dj">
-                <img src="dj8.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/10.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/11.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/12.jpg" alt="dj" class="dj">
+                <img src="imgs/djs/13.jpg" alt="dj" class="dj">
+                <div class="dj_names">
+                    <p class="dj_name">Jonas Blue</p>
+                    <p class="dj_name">Steve Aoki</p>
+                    <p class="dj_name">Kungs</p>
+                    <p class="dj_name">Nina Kraviz</p>
+                </div>
             </div>
-            <p>and More...</p>
         </div>
+        <button class="lineup_btn">see more info & timeline</button>
 
     </section>
     <section id="Ticket">
@@ -84,9 +114,9 @@
                     swap: true,
                     restartDelay: 2500
                 },
-                effect:{
-                    fade:{
-                        speed:1500,
+                effect: {
+                    fade: {
+                        speed: 1500,
                         crossfade: true
                     }
                 }
@@ -95,6 +125,7 @@
         });
     </script>
 
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -20,15 +20,24 @@ body {
 }
 
 nav {
-  position: fixed;
   display: flex;
+  position: fixed;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.651);
-  z-index: 1;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
+
+.show_nav {
+  visibility: visible;
+  opacity: 1;
+}
+
 nav > a {
   margin: 0 10px;
   text-decoration: none;
@@ -50,23 +59,26 @@ section {
 }
 .Home_paragraph {
   position: absolute;
-  margin-left: 30px;
+  margin: 50px;
   color: rgb(255, 255, 255);
   text-align: start;
-  z-index: 100;
+  z-index: 50;
 }
 #Home h1 {
   margin-top: 120px;
   margin-bottom: 0;
-  font-size: 50px;
+  font-size: 52px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.808);
 }
 #Home p {
-  font-size: 30px;
+  margin-top: 12px;
+  margin-left: 14px;
+  font-size: 34px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.685);
 }
 #Home img {
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
 
 /* button {
@@ -120,32 +132,76 @@ button:hover {
 /* LineUp */
 #LineUp {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-h1 {
-  font-size: 40px;
+#LineUp h1 {
+  margin: 0;
+  font-size: 50px;
+  text-align: center;
 }
 .row {
+  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .dj {
-  width: 120px;
+  width: 180px;
   border-radius: 100%;
 }
 .dj:hover {
   opacity: 30%;
 }
-#LineUp > p {
-  font-size: 24px;
+.dj_names {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.dj_names p {
+  width: 9%;
+  text-align: center;
+}
+.dj_name {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.show_dj {
+  visibility: visible;
+  opacity: 1;
+}
+
+.lineup_btn {
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(211, 210, 210);
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.lineup_btn:hover {
+  background-color: rgb(179, 176, 176);
 }
 
 /* Ticket */
 #Ticket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
-h1 {
-  font-size: 40px;
+#Ticket h1 {
+  font-size: 50px;
+}
+#Ticket p {
+  font-size: 30px;
+  text-align: center;
 }
