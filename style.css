@@ -24,7 +24,7 @@ h1 {
 p {
   font-size: 1.8rem;
 }
-#Gallery,
+#Companion,
 #LineUp,
 #Ticket {
   display: flex;
@@ -85,21 +85,21 @@ nav > a {
   height: 100%;
 }
 
-/* Gallery */
-#Gallery {
+/* Companion */
+#Companion {
   justify-content: center;
   align-items: center;
   background-color: black;
   cursor: default;
   overflow: hidden;
 }
-#Gallery img {
+#Companion img {
   width: 100%;
   height: 100%;
   opacity: 0.6;
   transition: all 0.5s ease-in-out;
 }
-#Gallery img:hover {
+#Companion img:hover {
   transform: scale(1.1);
   opacity: 0.4;
   overflow: hidden;
