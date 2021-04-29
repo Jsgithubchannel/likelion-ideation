@@ -1,6 +1,6 @@
+//Show navbar when it is on the top, and hide it when scrolling
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
-
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("show_nav");
@@ -9,12 +9,11 @@ document.addEventListener("scroll", () => {
   }
 });
 
+// Set dj_name align center, and mouseover event
 const dj = document.querySelectorAll(".dj");
-const djNames = document.querySelectorAll(".dj_names");
 const djName = document.querySelectorAll(".dj_name");
-console.log(djNames);
-
 for (let i = 0; i < dj.length; i++) {
+  djName[i].style.width = `${dj[i].clientWidth}px`;
   dj[i].addEventListener("mouseover", () => {
     djName[i].classList.add("show_dj");
   });

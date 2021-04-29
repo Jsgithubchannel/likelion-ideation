@@ -18,10 +18,27 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.945);
 }
-
-nav {
+h1 {
+  font-size: 3rem;
+}
+p {
+  font-size: 1.8rem;
+}
+#Gallery,
+#LineUp,
+#Ticket {
   display: flex;
+  flex-direction: column;
+}
+section {
+  height: 100%;
+  border: 1px solid rgb(34, 34, 34);
+}
+
+/* nav */
+nav {
   position: fixed;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
@@ -32,28 +49,17 @@ nav {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
 }
-
 .show_nav {
   visibility: visible;
   opacity: 1;
 }
-
 nav > a {
   margin: 0 10px;
   text-decoration: none;
   color: white;
 }
 
-section {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  height: 100%;
-  border: 1px solid rgb(34, 34, 34);
-}
-
 /* Home */
-
 #Home {
   overflow: hidden;
 }
@@ -67,13 +73,11 @@ section {
 #Home h1 {
   margin-top: 120px;
   margin-bottom: 0;
-  font-size: 52px;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.808);
 }
 #Home p {
   margin-top: 12px;
   margin-left: 14px;
-  font-size: 34px;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.685);
 }
 #Home img {
@@ -81,23 +85,8 @@ section {
   height: 100%;
 }
 
-/* button {
-  margin: 0 auto;
-  width: 100px;
-  height: 50px;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: rgb(211, 210, 210);
-} */
-
 /* Gallery */
 #Gallery {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
@@ -120,25 +109,14 @@ button:hover {
   color: white;
   text-align: center;
 }
-.pargraph h1 {
-  font-size: 50px;
-}
-.pargraph p {
-  font-size: 30px;
-  -webkit-text-stroke-width: 0.4px;
-  -webkit-text-stroke-color: rgb(0, 0, 0);
-}
 
 /* LineUp */
 #LineUp {
-  color: white;
-  display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
+  color: white;
 }
 #LineUp h1 {
   margin: 0;
-  font-size: 50px;
   text-align: center;
 }
 .row {
@@ -149,7 +127,7 @@ button:hover {
   margin-top: 50px;
 }
 .dj {
-  width: 180px;
+  width: 8%;
   border-radius: 100%;
 }
 .dj:hover {
@@ -161,25 +139,21 @@ button:hover {
   justify-content: space-evenly;
   width: 100%;
 }
-.dj_names p {
-  width: 9%;
-  text-align: center;
-}
 .dj_name {
+  font-size: 0.8rem;
+  text-align: center;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
 }
-
 .show_dj {
   visibility: visible;
   opacity: 1;
 }
-
 .lineup_btn {
   margin: 0 auto;
-  width: 200px;
-  height: 50px;
+  width: 10%;
+  height: 5%;
   background-color: rgb(211, 210, 210);
   outline: none;
   border: none;
@@ -192,16 +166,10 @@ button:hover {
 
 /* Ticket */
 #Ticket {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
 }
-#Ticket h1 {
-  font-size: 50px;
-}
 #Ticket p {
-  font-size: 30px;
   text-align: center;
 }
